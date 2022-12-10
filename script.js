@@ -29,7 +29,7 @@ class Calculator{
                 break;
             default: return; 
         }
-        this.firstOperand = result;
+        this.firstOperand = result.toFixed(3);
         this.operation = undefined;
         this.secondOperand = '';
     }

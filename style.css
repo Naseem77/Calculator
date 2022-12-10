@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.main-container{
+    display: grid;
+    min-height: 100vh;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(100px,auto) repeat(5,80px);
+}
+
+.main-container button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid black;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.main-container .operands-btn,
+.main-container .equal-btn{
+    background-color: #fe9f0d;
+}
+
+.main-container .number-btn{
+    background-color: #7e8180;
+}
+
+.main-container .AC-btn, 
+.main-container .del-btn{
+    background-color: #5a5c5d;
+}
+
+
+.main-container .AC-btn:hover,
+.main-container .del-btn:hover {
+    opacity: 0.7;
+    font-size: 1.8em;
+}
+
+.main-container .number-btn:hover {
+    font-size: 1.8em;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.main-container .operands-btn:hover,
+.main-container .equal-btn:hover {
+    opacity: 0.7;
+    font-size: 1.8em;
+}
+
+.AC-btn, .zero-btn{
+    grid-column: span 2;
+}
+
+.zero-btn {
+    border-bottom-left-radius: 5px;
+}
+.equal-btn{
+    border-bottom-right-radius: 5px;
+}
+
+.results{
+    grid-column: 1 / 5;
+    display: flex;
+    background-color: #505151;
+    flex-direction: column;
+    padding: 10px;
+    align-items: flex-end;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.results .previous{
+    color: #ecedec;
+    font-size: 1.5rem;
+}
+
+.results .current {
+    color: #fafffa;
+    font-size: 2.5rem;
+}
